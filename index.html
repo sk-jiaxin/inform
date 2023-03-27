@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>信息提交表单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
       /* 添加样式来修改提交按钮 */
       input[type="submit"] {
@@ -10,6 +11,9 @@
         border-radius: 5px;
         padding: 10px 20px;
         font-size: 16px;
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
       }
       
       /* 居中表单 */
@@ -20,6 +24,24 @@
         justify-content: center;
         height: 100vh;
       }
+      
+      /* 使表单元素适合手机显示 */
+      label, input, textarea {
+        width: 100%;
+        max-width: 300px;
+        box-sizing: border-box;
+      }
+      
+      /* 去除默认的表单样式 */
+      input, textarea {
+        border: none;
+        outline: none;
+        background-color: #f5f5f5;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
     </style>
   </head>
   <body>
@@ -27,13 +49,13 @@
       <h1>请填写以下信息：</h1>
 
       <label for="name">姓名：</label>
-      <input type="text" id="name" name="name" required><br><br>
+      <input type="text" id="name" name="name" required>
 
       <label for="code">采血管条码：</label>
-      <input type="text" id="code" name="code" required><br><br>
+      <input type="code" id="code" name="code" required>
 
       <label for="message">留言：</label>
-      <textarea id="message" name="message" required></textarea><br><br>
+      <textarea id="message" name="message" required></textarea>
 
       <input type="submit" value="提交">
     </form>
